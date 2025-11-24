@@ -25,12 +25,6 @@ module.exports = (sequelize, DataTypes) => {
             imageData: {
                 type: DataTypes.BLOB('long'),
             },
-            tahunTerbit: {
-                type: DataTypes.INTEGER,
-            },
-            bidang: {
-                type: DataTypes.ENUM('sosial', 'teknik'),
-            }
         },
         {
             tableName: 'komik',

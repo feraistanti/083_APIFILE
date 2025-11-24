@@ -1,13 +1,13 @@
 const express = require('express');
-console.router = express.Router();
+const router = express.Router();
 const multer = require('multer');
 const komikController = require('../controllers/komikController');
 const upload = multer({ storage: multer.memoryStorage() });
 
-router.post('/komik', upload.single('gambar'), komikController.createkomik);
-router.get('/komik', komikController.getAllkomik);
-router.get('/komik/:id', komikController.getkomikById);
-router.put('/komik/:id', upload.single('gambar'), komikController.updatekomik);
-router.delete('/komik/:id', komikController.deletekomik);   
+router.post('/komik', upload.single('gambar'), komikController.createKomik);
+router.get('/komik', komikController.getAllKomik);
+router.get('/komik/:id', komikController.getKomikById);
+router.put('/komik/:id', upload.single('gambar'), komikController.updateKomik);
+router.delete('/komik/:id', komikController.deleteKomik);   
 
 module.exports = router;
